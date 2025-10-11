@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mi Portafolio - Yarbouh Yamili</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="projects">
+            <h2>Mis Proyectos</h2>
+            
+            <div class="project-card">
+                <h3>VITALINK</h3>
+                <div class="video-container vitalink-video">
+                    <a href="https://www.youtube.com/watch?v=tno_jExj1QE" target="_blank" rel="noopener noreferrer" class="youtube-link">
+                        <div class="youtube-placeholder">
+                            <i class="fab fa-youtube"></i>
+                            <span>Ver video en YouTube</span>
+                            <small class="video-note">(Haz clic para ver en YouTube)</small>
+                        </div>
+                    </a>
+                </div>
+                <p class="project-description">
+                    Sistema web diseñado para la Fundación Vanesa Durán como trabajo final de carrera (en desarrollo). Optimiza la gestión del inventario de pelucas oncológicas, donaciones de cabello, y los pedidos y devoluciones de pelucas, facilitando procesos clave para la fundación.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Sorteador de Eventos</h3>
+                <div class="video-container">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/9F-uAdQoINU" 
+                        title="Demo Sorteador" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="project-description">
+                    Aplicación para gestionar sorteos de eventos: permite leer un Excel con los asistentes, configurar premios, agregar logos de sponsors y mostrar los ganadores en pantalla.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Lector AI</h3>
+                <div class="video-container">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/q1OSmFtxkQo" 
+                        title="Demo Lector AI" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="project-description">
+                    Lector inteligente de documentos Word y PDF que lee en voz alta, complementa información con fuentes académicas y permite hacer preguntas sobre el contenido leído.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© <span class="copyright-year">2024</span> Yarbouh Yamili. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/yamili-yarbouh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/5493837692840" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.querySelector('.copyright-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
