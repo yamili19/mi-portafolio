@@ -46,6 +46,42 @@ header h1 {
 .projects {
     padding: 2rem 0;
 }
+/* Videos responsive (YouTube / iframes) */
+.video-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+
+    /* Forma moderna */
+    aspect-ratio: 16 / 9;
+}
+
+/* Hace que el iframe ocupe todo el contenedor */
+.video-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
+}
+
+/* Fallback por si algún navegador viejo ignora aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+    .video-container {
+        position: relative;
+        height: 0;
+        padding-top: 56.25%; /* 16:9 */
+    }
+    .video-container iframe {
+        position: absolute;
+        inset: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
 
 .projects h2 {
     text-align: center;
@@ -74,10 +110,12 @@ header h1 {
 }
 
 /* Estilos específicos para el video de VITALINK */
+/* Contenedor tipo video (16:9) */
 .vitalink-video {
-    min-height: 80px !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .vitalink-video + .project-description {
@@ -143,21 +181,21 @@ footer {
     }
 }
 
-/* YouTube Link */
+/* Placeholder que ocupa TODO el contenedor */
 .vitalink-video .youtube-placeholder {
+    width: 100%;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 1rem 0.5rem;  /* Reducido el padding */
+
     text-align: center;
-    transition: all 0.3s ease;
-    min-height: 100px;  /* Altura mínima reducida */
-    height: auto;
-    border: 2px dashed #dee2e6;
-    margin: 0;
+    background: #fff;
+    border-radius: 12px;
+
+    cursor: pointer;
 }
 
 .vitalink-video .youtube-placeholder:hover {
